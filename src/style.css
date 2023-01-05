@@ -1,0 +1,54 @@
+.main {
+  margin-top: 100px;
+  border-radius: 5px;
+  box-shadow: 0 0px 12px 20px#4C72AD;
+  max-width: 400px;
+  background-image: url("../images/blue-sky-background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.data {
+  list-style-type: none;
+}
+.weather {
+  display: block;
+  padding: 40px;
+}
+.WeatherForecast {
+  height: 150px;
+  text-align: center;
+  font-weight: 200;
+  font-size: 20px;
+}
+#city {
+  font-weight: 400px;
+  margin-left: 30px;
+  font-size: 60px;
+}
+.numb {
+  font-weight: 500;
+  color: rgba(97, 96, 96, 0.979);
+}
+.temperature-container {
+  color: rgb(131, 16, 119);
+  font-size: 80px;
+  text-align: right;
+  line-height: 100px;
+  margin-left: -40px;
+  margin-bottom: 30px;
+}
+.weather-info {
+  margin-left: -40px;
+  margin-bottom: 30px;
+}
+.card-text {
+  color: rgb(159, 97, 240);
+  margin-top: 20px;
+}
+.forecast-temperature-min {
+  opacity: 0.6;
+}
+footer {
+  margin: 30px;
+}

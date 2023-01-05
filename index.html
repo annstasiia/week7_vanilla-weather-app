@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -14,8 +15,130 @@
     <title>Week 7 Weather App</title>
   </head>
   <body>
-    <div class="container">
-      <p>rsdejuksrgt</p>
+  <div class="container col-lg-6 main">
+      <div class="weather">
+        <form class="search-city row justify-content-evenly"> <!---SEARCH FORM--->
+          <div class="col-8">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter a city..."
+            />
+          </div>
+          <button type="submit" class="btn btn-primary col-3">Search</button>
+        </form>
+
+
+        <div class="weather-info mt-5">
+          <div class="row">
+            <div class="col-6 text-start ">
+              <h1 id="city"></h1> <!---CITY--->
+              <ul class="data" >
+                <li id="date"><span>Monday 10:54</span>, <span id="description">gyitiyfkfyiifyikfy</span> </li> <!---DAY TIME CONDITIONS--->
+                <li>
+                  Humidity: <span class="numb"><span class="numb" id="humidity"></span> %</span>  <!---HUMIDITY---> , Wind: <span class="numb"><span class="numb" id ="wind"></span> km/h</span>  <!---WIND--->
+                </li>
+              </ul>
+            </div>
+      
+            <div class="temperature-container col-6">
+                <span id="temperature"></span><span class="unit">°C</span> <!--TEMPERATURE-->
+           <img src="http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png" alt="icon" class="float-right" id="icon">
+           </div>
+            </div>
+            </div>
+
+          <div class="container">  <!---CARDS 5DAY WEATHER--->
+             <div class="row"> 
+            <div class="col">
+              <div class="card WeatherForecast">
+                <div class="card-body WeatherForecastPreview">
+                    <div class="card-title forecast-time">Mon</div>
+                    <div class="card-text">☀️</div>
+                    <div class="card-text forecast-temperature">
+                      <span class="forecast-temperature-max">10°</span
+                      ><span class="forecast-temperature-min">6°</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+              <div class="card WeatherForecast">
+                <div class="card-body WeatherForecastPreview">
+                    <div class="card-title forecast-time">Tue</div>
+                    <div class="card-text">☀️</div>
+                    <div class="card-text forecast-temperature">
+                      <span class="forecast-temperature-max">11°</span
+                      ><span class="forecast-temperature-min">8°</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+              <div class="card WeatherForecast">
+                <div class="card-body WeatherForecastPreview">
+                    <div class="card-title forecast-time">Wed</div>
+                    <div class="card-text">☀️</div>
+                    <div class="card-text forecast-temperature">
+                      <span class="forecast-temperature-max">13°</span
+                      ><span class="forecast-temperature-min">10°</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+              <div class="card WeatherForecast">
+                <div class="card-body WeatherForecastPreview">
+                  
+                    <div class="card-title forecast-time">Thu</div>
+          <div class="card-text">☀️</div>
+                    <div class="card-text forecast-temperature">
+                      <span class="forecast-temperature-max">13°</span
+                      ><span class="forecast-temperature-min">11°</span>
+                  </div>
+                </div>
+                </div>
+              </div>
+              <div class="col">
+              <div class="card WeatherForecast">
+                <div class="card-body WeatherForecastPreview">
+                  <div class="card-title forecast-time">Fri</div>
+                  <div class="card-text">☀️</div>
+                    <div class=" card-text forecast-temperature">
+                      <span class="forecast-temperature-max">15°</span>
+                      <span class="forecast-temperature-min">12°</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <footer>
+              This project was coded by
+              <a
+                href="https://www.shecodes.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >SheCodes</a
+              >
+              and is
+              <a
+                href="https://github.com/shecodesio/weather"
+                target="_blank"
+                rel="noopener noreferrer"
+                >open-sourced on GitHub</a
+              >
+              and
+              <a
+                href="https://shecodes-weather.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >hosted on Netlify</a
+              >
+            </footer>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="src/app.js"></script>
   </body>
