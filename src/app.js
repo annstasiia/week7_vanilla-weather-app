@@ -46,3 +46,4 @@ let apiKey = "5c03ffecf9402adeff68f1a943b659e5";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Kherson&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
+huhkiujh;
