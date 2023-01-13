@@ -35,8 +35,16 @@
   font-size: 80px;
   text-align: right;
   line-height: 100px;
-  margin-left: -40px;
+  margin-right: -80px;
   margin-bottom: 30px;
+}
+.units {
+  font-size: 40px;
+  color: rgb(131, 16, 119);
+}
+#fahrenheit-link {
+  color: rgb(131, 16, 119);
+  opacity: 0.6;
 }
 .weather-info {
   margin-left: -40px;
@@ -49,6 +57,13 @@
 .forecast-temperature-min {
   opacity: 0.6;
 }
-footer {
-  margin: 30px;
+
+#icon {
+  font-size: 5px;
+}
+row {
+  margin-right: 0px;
+}
+#celsius-link {
+  color: rgb(131, 16, 119);
 }

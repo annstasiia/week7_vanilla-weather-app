@@ -17,22 +17,34 @@
   <body>
   <div class="container col-lg-6 main">
       <div class="weather">
-        <form class="search-city row justify-content-evenly"> <!---SEARCH FORM--->
-          <div class="col-8">
+        <form class="search-form" id ="search-form"> <!---SEARCH FORM--->
+        <div class="row">
+          <div class="col-6">
             <input
-              type="text"
-              class="form-control"
+              type="search"
+              class = "form-control form-control-lg"
               placeholder="Enter a city..."
+              id="city-input"
+              autocomplete="off"
             />
           </div>
-          <button type="submit" class="btn btn-primary col-3">Search</button>
+          <div class="col-3">
+          <input
+           type="submit"
+                  value="Search"
+           class="btn btn-primary w-100 btn-lg p-2"
+           />
+          </div> 
+          <div class="col-3">
+           <button onclick="getCurrentCity()" value="Current" class="btn btn-primary w-100 btn-lg p-2" id="current-btn">Current</button>
+           </div>
         </form>
 
 
-        <div class="weather-info mt-5">
+        <div class="weather-info mt-5 ">
           <div class="row">
             <div class="col-6 text-start ">
-              <h1 id="city"></h1> <!---CITY--->
+              <h1 id="city" id="show"></h1> <!---CITY--->
               <ul class="data" >
                 <li id="date"><span>Monday 10:54</span>, <span id="description">gyitiyfkfyiifyikfy</span> </li> <!---DAY TIME CONDITIONS--->
                 <li>
@@ -41,8 +53,10 @@
               </ul>
             </div>
       
+              
             <div class="temperature-container col-6">
-                <span id="temperature"></span><span class="unit">°C</span> <!--TEMPERATURE-->
+               <span id="temperature"></span> </span>  <span class="units"><a href="#" id="celsius-link" class="">°C</a> |
+                                    <a href="#" id="fahrenheit-link" class="active">°F</a></span><!--TEMPERATURE-->
            <img src="http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png" alt="icon" class="float-right" id="icon">
            </div>
             </div>
@@ -53,7 +67,7 @@
             <div class="col">
               <div class="card WeatherForecast">
                 <div class="card-body WeatherForecastPreview">
-                    <div class="card-title forecast-time">Mon</div>
+                    <div class="card-title forecast-time">Sun</div>
                     <div class="card-text">☀️</div>
                     <div class="card-text forecast-temperature">
                       <span class="forecast-temperature-max">10°</span
@@ -65,7 +79,7 @@
               <div class="col">
               <div class="card WeatherForecast">
                 <div class="card-body WeatherForecastPreview">
-                    <div class="card-title forecast-time">Tue</div>
+                    <div class="card-title forecast-time">Mon</div>
                     <div class="card-text">☀️</div>
                     <div class="card-text forecast-temperature">
                       <span class="forecast-temperature-max">11°</span
@@ -77,7 +91,7 @@
               <div class="col">
               <div class="card WeatherForecast">
                 <div class="card-body WeatherForecastPreview">
-                    <div class="card-title forecast-time">Wed</div>
+                    <div class="card-title forecast-time">Tue</div>
                     <div class="card-text">☀️</div>
                     <div class="card-text forecast-temperature">
                       <span class="forecast-temperature-max">13°</span
@@ -90,7 +104,7 @@
               <div class="card WeatherForecast">
                 <div class="card-body WeatherForecastPreview">
                   
-                    <div class="card-title forecast-time">Thu</div>
+                    <div class="card-title forecast-time">Wed</div>
           <div class="card-text">☀️</div>
                     <div class="card-text forecast-temperature">
                       <span class="forecast-temperature-max">13°</span
@@ -102,7 +116,7 @@
               <div class="col">
               <div class="card WeatherForecast">
                 <div class="card-body WeatherForecastPreview">
-                  <div class="card-title forecast-time">Fri</div>
+                  <div class="card-title forecast-time">Thu</div>
                   <div class="card-text">☀️</div>
                     <div class=" card-text forecast-temperature">
                       <span class="forecast-temperature-max">15°</span>
@@ -113,13 +127,14 @@
               </div>
             </div>
             </div>
+            <div class="footer mt-4">
             <footer>
               This project was coded by
               <a
-                href="https://www.shecodes.io/"
+                href="https://www.facebook.com/people/Anastasiia-Sochynska/100035363415686/?mibextid=ZbWKwL"
                 target="_blank"
                 rel="noopener noreferrer"
-                >SheCodes</a
+                >Anastasiia Sochynska</a
               >
               and is
               <a
@@ -136,6 +151,7 @@
                 >hosted on Netlify</a
               >
             </footer>
+            </div>
           </div>
         </div>
       </div>
